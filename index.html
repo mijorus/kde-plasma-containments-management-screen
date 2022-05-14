@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Containments management</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <ul class="displays">
+      <li>
+        <div class="display">
+          <p class="display__label">Display VGA-1</p>
+          <div class="display__box box">
+            <img src="./wallpaper.jpg" alt="KDE wallpaper" class="box__wallpaper">
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="display display_active">
+          <p class="display__label">Display VGA-1</p>
+          <div class="display__box box">
+            <img src="./wallpaper.jpg" alt="KDE wallpaper" class="box__wallpaper">
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="display">
+          <p class="display__label">Display VGA-1</p>
+          <div class="display__box box">
+            <img src="./wallpaper.jpg" alt="KDE wallpaper" class="box__wallpaper">
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <ul class="context-menu">
+          <li>
+            <div class="context-menu-item">
+              <p>Move to Screen VGA-1</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="context-menu-item">
+              <p>Move to Screen VGA-2</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="context-menu-item">
+              <p>Move to Screen VGA-3</p>
+            </div>
+          </li>
+
+          <div class="context-menu-separator"></div>
+
+          <li>
+            <div class="context-menu-item">
+              <p>Remove</p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="buttons">
+      <li>
+        <button class="btn-close">Close</button>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
