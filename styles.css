@@ -1,4 +1,5 @@
 /* Styles reset */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
   padding: 0;
@@ -22,14 +23,16 @@ button {
   --lighter-color: rgb(55, 55, 55);
   --main-border-color: rgb(0, 0, 0, 0.5);
   --active-border-color: rgb(0, 0, 0);
-  --context-menu-item-height: 45px;
+  --context-menu-item-height: 40px;
+  --context-menu-item-width: 40px;
   --icon-placeholder-size: 35px;
+  --shadow-default: 0px 2px 8px 0px gray;
+  --shadow-soft: 0px 2px 20px 0px rgb(195, 195, 195);
 }
 
 body {
   background: var(--main-bg-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -64,38 +67,36 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 500px;
-  height: 300px;
-  border: 2px solid var(--main-border-color);
+  width: 45vw;
+  /* height: 300px; */
+  aspect-ratio: 16 / 9;
   font-size: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid var(--main-border-color);
+  background-image: url('./wallpaper.jpg');
 }
 
 .panel {
+    background: white;
 }
 
 .display.display_active .box {
   border: 2px solid var(--active-border-color);
+  
 }
 
 .panel__icon-placeholder {
-  margin: 0 auto;
+  margin: 2px auto;
 }
 
 .box__wallpaper-wrapper {
   position: relative;
-  /* top: -1px;
-  left: -1px;
-  width: calc(100% + 1px);
-  height: calc(100% + 1px); */
-  /* hack to get rid of gaps */
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 2px solid var(--main-border-color);
+
 }
 
 .display.display_active .box__wallpaper-wrapper {
@@ -113,9 +114,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 
 .wallpaper_contain {
@@ -142,8 +141,8 @@ body {
   background: #fff;
   /* for the icon file */
   /* background: url('./'); */
-  border: 1px solid gray;
-  border-radius: 3px;
+  border: 1px solid rgb(161, 161, 161);
+  border-radius: 5px;
 }
 
 .context-menu {
@@ -167,7 +166,7 @@ body {
 .context-menu-separator {
   width: 100%;
   height: 1px;
-  background: rgb(155, 155, 155);
+  background: rgb(207, 207, 207);
 }
 
 .buttons {
@@ -184,4 +183,20 @@ body {
   border-radius: 3px;
   background: #fff;
   filter: drop-shadow(0 0 7px rgb(235, 235, 235));
+}
+
+
+.context-menu-cont {
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    z-index: 99;
+    background: whitesmoke;
+}
+
+.display2 .panel-box{
+    width: var(--context-menu-item-width);
+    height: 100%;
+    align-self: end;
+    background: white;
 }
