@@ -207,3 +207,11 @@ body {
     align-self: end;
     background: white;
 }
+
+.box__panel-bottom {
+    border-top: 2px solid black;
+}
+
+.box__panel-top {
+    border-bottom: 2px solid black;
+}
