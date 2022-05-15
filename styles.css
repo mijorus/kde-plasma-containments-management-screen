@@ -26,6 +26,7 @@ button {
   --context-menu-item-height: 40px;
   --context-menu-item-width: 40px;
   --icon-placeholder-size: 35px;
+  --close-btn-border-color: rgb(195, 195, 195);
   --shadow-default: 0px 2px 8px 0px gray;
   --shadow-soft: 0px 2px 20px 0px rgb(195, 195, 195);
 }
@@ -139,10 +140,16 @@ body {
   width: var(--icon-placeholder-size);
   height: var(--icon-placeholder-size);
   background: #fff;
-  /* for the icon file */
-  /* background: url('./'); */
   border: 1px solid rgb(161, 161, 161);
   border-radius: 5px;
+  padding: 5px;
+}
+
+.icon-placeholder .move-icon {
+    background-image: url('./handle_move.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 
 .context-menu {
@@ -179,7 +186,7 @@ body {
   color: var(--lighter-color);
   width: 100px;
   height: 36px;
-  border: 1px solid gray;
+  border: 1px solid var(--close-btn-border-color);
   border-radius: 3px;
   background: #fff;
   filter: drop-shadow(0 0 7px rgb(235, 235, 235));
